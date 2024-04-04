@@ -1,0 +1,2109 @@
+ {
+  "tray_export_version": 4,
+  "export_type": "workflow",
+  "workflows": [
+    {
+      "id": "7ff09f5e-d94a-4c43-8777-55bf012c8089",
+      "created": "2024-04-02T21:13:10.130866Z",
+      "workspace_id": "6ee358b4-8a97-40a5-a96a-e09a3705943e",
+      "project_id": "95e946d9-4425-4452-90eb-eda13f6f8735",
+      "creator": "305501b5-268d-4276-8715-260e7c222759",
+      "version": {
+        "id": "868e42e1-6a5b-498b-8b4c-d8d9892a2801",
+        "created": "2024-04-04T14:25:17.624624Z"
+      },
+      "title": "Copy of Americor Clients To NetSuite Customers - Main Child - PROD",
+      "enabled": true,
+      "tags": [],
+      "settings": {
+        "config": {
+          "cc_recs": "[{\"name\": \"Anirudh Goutam\", \"email\": \"anirudh.goutam@concurrentservices.com\"},{\"name\": \"Ravi Mule\", \"email\": \"ravi.mule@concurrentservices.com\"}]",
+          "recipients": "[{\"name\":\"Vinod Kumar\",\"email\":\"vinod.kumar@concurrentservices.com\"},{\"name\":\"Aqeel Ahmad\",\"email\":\"aqeel.ahmad@concurrentservices.com\"},{\"name\":\"Mohammed Ismail\",\"email\":\"mohammed.ismail@getconcurrent.com\"}]"
+        },
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "last_error_flow_name": {
+              "title": "last_error_flow_name",
+              "type": "string",
+              "format": "text"
+            },
+            "current_running_date": {
+              "title": "current_running_date",
+              "type": [
+                "string",
+                "integer"
+              ],
+              "format": "datetime",
+              "date_mask": "YYYY-MM-DD"
+            },
+            "recipients": {
+              "title": "recipients",
+              "type": [
+                "array"
+              ]
+            },
+            "cc_recs": {
+              "title": "cc_recs",
+              "type": [
+                "array"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "recipients",
+            "current_running_date",
+            "last_error_flow_name",
+            "cc_recs"
+          ],
+          "advanced": []
+        },
+        "output_schema": {}
+      },
+      "steps_structure": [
+        {
+          "name": "trigger",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "storage-23",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "script-8",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "boolean-condition-6",
+          "type": "branch",
+          "content": {
+            "true": [
+              {
+                "name": "loop-4",
+                "type": "loop",
+                "content": {
+                  "_loop": [
+                    {
+                      "name": "storage-8",
+                      "type": "normal",
+                      "content": {}
+                    },
+                    {
+                      "name": "script-40",
+                      "type": "normal",
+                      "content": {}
+                    },
+                    {
+                      "name": "http-client-6",
+                      "type": "branch",
+                      "content": {
+                        "error": [
+                          {
+                            "name": "storage-50",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "storage-51",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "script-41",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "storage-52",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "script-42",
+                            "type": "normal",
+                            "content": {}
+                          },
+                          {
+                            "name": "break-loop-3",
+                            "type": "break",
+                            "content": {}
+                          }
+                        ],
+                        "success": [
+                          {
+                            "name": "boolean-condition-25",
+                            "type": "branch",
+                            "content": {
+                              "true": [
+                                {
+                                  "name": "boolean-condition-26",
+                                  "type": "branch",
+                                  "content": {
+                                    "true": [
+                                      {
+                                        "name": "script-1",
+                                        "type": "normal",
+                                        "content": {}
+                                      },
+                                      {
+                                        "name": "boolean-condition-27",
+                                        "type": "branch",
+                                        "content": {
+                                          "true": [
+                                            {
+                                              "name": "boolean-condition-1",
+                                              "type": "branch",
+                                              "content": {
+                                                "true": [
+                                                  {
+                                                    "name": "break-loop-5",
+                                                    "type": "break",
+                                                    "content": {}
+                                                  }
+                                                ],
+                                                "false": [
+                                                  {
+                                                    "name": "storage-1",
+                                                    "type": "normal",
+                                                    "content": {}
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "false": [
+                                            {
+                                              "name": "storage-53",
+                                              "type": "normal",
+                                              "content": {}
+                                            },
+                                            {
+                                              "name": "storage-54",
+                                              "type": "normal",
+                                              "content": {}
+                                            },
+                                            {
+                                              "name": "script-43",
+                                              "type": "normal",
+                                              "content": {}
+                                            },
+                                            {
+                                              "name": "break-loop-4",
+                                              "type": "break",
+                                              "content": {}
+                                            },
+                                            {
+                                              "name": "callable-workflow-response-21",
+                                              "type": "normal",
+                                              "content": {}
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ],
+                                    "false": [
+                                      {
+                                        "name": "break-loop-1",
+                                        "type": "break",
+                                        "content": {}
+                                      }
+                                    ]
+                                  }
+                                }
+                              ],
+                              "false": [
+                                {
+                                  "name": "storage-55",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "storage-56",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "script-44",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "storage-57",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "script-45",
+                                  "type": "normal",
+                                  "content": {}
+                                },
+                                {
+                                  "name": "break-loop-2",
+                                  "type": "break",
+                                  "content": {}
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "terminate-1",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "storage-58",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "script-46",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "boolean-condition-28",
+                "type": "branch",
+                "content": {
+                  "true": [
+                    {
+                      "name": "send-email-3",
+                      "type": "normal",
+                      "content": {}
+                    },
+                    {
+                      "name": "call-workflow-9",
+                      "type": "normal",
+                      "content": {}
+                    },
+                    {
+                      "name": "storage-59",
+                      "type": "normal",
+                      "content": {}
+                    }
+                  ],
+                  "false": []
+                }
+              },
+              {
+                "name": "storage-60",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "storage-61",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "script-47",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "callable-workflow-response-23",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "terminate-3",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "call-workflow-1",
+                "type": "normal",
+                "content": {}
+              }
+            ],
+            "false": [
+              {
+                "name": "script-9",
+                "type": "normal",
+                "content": {}
+              },
+              {
+                "name": "callable-workflow-response-1",
+                "type": "normal",
+                "content": {}
+              }
+            ]
+          }
+        }
+      ],
+      "steps": {
+        "boolean-condition-1": {
+          "title": "Boolean Condition",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.http-client-6.body._links.next"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "null",
+                      "value": null
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "boolean-condition-25": {
+          "title": "if code == 200",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.http-client-6.status_code"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "number",
+                      "value": 200
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "boolean-condition-26": {
+          "title": "if totalcount > 0",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.http-client-6.body._meta.totalCount"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": ">"
+                    },
+                    "value2": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "boolean-condition-27": {
+          "title": "isSuccess?",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.script-1.result.isSuccess"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "boolean-condition-28": {
+          "title": "Is Email To Send ?",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.script-46.result.IS_EMAIL_TO_SEND"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "boolean-condition-6": {
+          "title": "Is Flow Need To Be Run?",
+          "connector": {
+            "name": "boolean-condition",
+            "version": "2.3"
+          },
+          "operation": "boolean_condition",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "conditions": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "value1": {
+                      "type": "jsonpath",
+                      "value": "$.steps.script-8.result"
+                    },
+                    "comparison_type": {
+                      "type": "string",
+                      "value": "==="
+                    },
+                    "value2": {
+                      "type": "boolean",
+                      "value": true
+                    }
+                  }
+                }
+              ]
+            },
+            "strictness": {
+              "type": "string",
+              "value": "All"
+            }
+          }
+        },
+        "break-loop-1": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "break-loop-2": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "break-loop-3": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "break-loop-4": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "break-loop-5": {
+          "title": "Break Loop",
+          "connector": {
+            "name": "break-loop",
+            "version": "1.1"
+          },
+          "operation": "break",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "call-workflow-1": {
+          "title": "Upsert Customers to NS",
+          "connector": {
+            "name": "call-workflow",
+            "version": "2.0"
+          },
+          "operation": "fire_and_wait_for_response",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "workflow_id": {
+              "type": "string",
+              "value": "91be5328-c787-4d7a-a155-e0a106f3fad8"
+            },
+            "trigger_input": {
+              "type": "object",
+              "value": {
+                "data": {
+                  "type": "jsonpath",
+                  "value": "$.steps.http-client-5.body"
+                }
+              }
+            }
+          }
+        },
+        "call-workflow-9": {
+          "title": "Call Jira Ticket Creation Flow",
+          "connector": {
+            "name": "call-workflow",
+            "version": "2.0"
+          },
+          "operation": "fire_and_forget",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "workflow_id": {
+              "type": "string",
+              "value": "61d8badc-3101-499c-975c-bdfd1bbddd3d"
+            },
+            "trigger_input": {
+              "type": "object",
+              "value": {
+                "ticket": {
+                  "type": "jsonpath",
+                  "value": "$.steps.script-46.result.ticket"
+                }
+              }
+            }
+          }
+        },
+        "callable-workflow-response-1": {
+          "title": "Callable response",
+          "connector": {
+            "name": "callable-workflow-response",
+            "version": "1.0"
+          },
+          "operation": "response",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "response": {
+              "type": "jsonpath",
+              "value": "$.steps.script-9.result"
+            }
+          }
+        },
+        "callable-workflow-response-21": {
+          "title": "Callable response",
+          "connector": {
+            "name": "callable-workflow-response",
+            "version": "1.0"
+          },
+          "operation": "response",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "response": {
+              "type": "jsonpath",
+              "value": "$.steps.script-43.result"
+            }
+          }
+        },
+        "callable-workflow-response-23": {
+          "title": "Callable response",
+          "connector": {
+            "name": "callable-workflow-response",
+            "version": "1.0"
+          },
+          "operation": "response",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "response": {
+              "type": "jsonpath",
+              "value": "$.steps.script-47.result"
+            }
+          }
+        },
+        "http-client-6": {
+          "title": "HTTP Get Clients Request",
+          "connector": {
+            "name": "http-client",
+            "version": "2.1"
+          },
+          "operation": "get_returning_json",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "body": {
+                "type": "object",
+                "properties": {
+                  "_links": {
+                    "type": "object",
+                    "properties": {
+                      "first": {
+                        "type": "object",
+                        "properties": {
+                          "href": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "last": {
+                        "type": "object",
+                        "properties": {
+                          "href": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "next": {
+                        "type": "object",
+                        "properties": {
+                          "href": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "self": {
+                        "type": "object",
+                        "properties": {
+                          "href": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "_meta": {
+                    "type": "object",
+                    "properties": {
+                      "currentPage": {
+                        "type": "number"
+                      },
+                      "pageCount": {
+                        "type": "number"
+                      },
+                      "perPage": {
+                        "type": "number"
+                      },
+                      "totalCount": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "city": {
+                          "type": "string"
+                        },
+                        "createdDate": {
+                          "type": "string"
+                        },
+                        "enrolledDate": {
+                          "type": "string"
+                        },
+                        "enrolledTotalDebt": {
+                          "type": "number"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "number"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        },
+                        "modifiedDate": {
+                          "type": "string"
+                        },
+                        "paymentProcessor": {
+                          "type": "string"
+                        },
+                        "sales": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "name": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          }
+                        },
+                        "settlementFeePercentage": {
+                          "type": "number"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "createdDate",
+                        "enrolledDate",
+                        "enrolledTotalDebt",
+                        "firstName",
+                        "id",
+                        "lastName",
+                        "modifiedDate",
+                        "paymentProcessor",
+                        "sales",
+                        "settlementFeePercentage",
+                        "state",
+                        "status",
+                        "type",
+                        "zip"
+                      ]
+                    }
+                  }
+                }
+              },
+              "headers": {
+                "type": "object",
+                "properties": {
+                  "Content-Type": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Date": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Expect-Ct": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Link": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Permissions-Policy": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Referrer-Policy": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Server": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Set-Cookie": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Strict-Transport-Security": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Vary": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Content-Type-Options": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Frame-Options": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Lb-Id": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Node-Id": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Pagination-Current-Page": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Pagination-Page-Count": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Pagination-Per-Page": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Pagination-Total-Count": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Request-Id": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "X-Xss-Protection": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "status_code": {
+                "type": "number"
+              }
+            }
+          },
+          "error_handling": {
+            "strategy": "manual"
+          },
+          "properties": {
+            "url": {
+              "type": "jsonpath",
+              "value": "$.steps.script-40.result.url"
+            },
+            "headers": {
+              "type": "jsonpath",
+              "value": "$.steps.script-40.result.headers"
+            },
+            "timeout_millis": {
+              "type": "integer",
+              "value": 300000
+            }
+          }
+        },
+        "loop-4": {
+          "title": "Loop until end",
+          "connector": {
+            "name": "loop",
+            "version": "1.1"
+          },
+          "operation": "loop_forever",
+          "output_schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "id": "http://jsonschema.net",
+            "required": true,
+            "properties": {
+              "index": {
+                "type": "number",
+                "id": "http://jsonschema.net/index"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {}
+        },
+        "script-1": {
+          "title": "Mock",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : true\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-40": {
+          "title": "HTTP GET URL",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "page_number"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-8.value"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "current_running_date"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.trigger.data.current_running_date"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  const headers = {\n    \"Accept\": \"application/json\",\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": \"Bearer iQOY6MwFX1A_nX5_tssvf2Dt-wrtEuhB\"\n  };\n\n  const hardCodedDate = input.current_running_date;\n  let pageNumber = input.page_number || 1;\n  const statuses = [5, 6, 7, 8, 9, 10, 48, 20, 21, 29, 35, 36, 47, 50, 51, 53, 30, 31, 44, 45, 49];\n  \n  let url = `https://api.americor.biz/net-suite/clients?per-page=100&statuses[]=${statuses.join('&statuses[]=')}&date=${hardCodedDate}`;\n\n  if (pageNumber > 1) {\n    url += `&page=${pageNumber}`;\n  }\n\n  return { \n    headers, \n    url,\n    nextPage: pageNumber + 1\n  };\n};\n"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-41": {
+          "title": "Email Body",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "error"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.errors.http-client-2"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "connector_name"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "HTTP Get Clients Request"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "workflow_title"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.env.workflow_title"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "workflow_url"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.env.execution_log_url"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(data) {\n  \n  var err = data.error;\n  var connector_name = data.connector_name;\n  \n  let dateTime = new Date();\n\n  let emailMessage = data.workflow_title + \"\\n\" +\n  \"Workflow Url : \" + data.workflow_url + \"\\n\" +\n  \"Connector : \" + connector_name + \"\\n\" +\n  \"Date & Time : \" + dateTime.toLocaleString() + \"\\n\" +\n  \"Message : \" + err.message + \"\\n\" +\n  \"Payload : \" + err.payload;\n  \n  \n  \n\treturn emailMessage;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-42": {
+          "title": "Response To Parent",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : false\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-43": {
+          "title": "Response To Parent",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : false\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-44": {
+          "title": "Email Body",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "connector_name"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "HTTP Get Clients Request"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "status_code"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.http-client-6.status_code"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "workflow_title"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.env.workflow_title"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "workflow_url"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.env.execution_log_url"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(data) {\n  \n  var status_code = data.status_code;\n  var connector_name = data.connector_name;\n  \n  let dateTime = new Date();\n\n  let emailMessage = data.workflow_title + \"\\n\" +\n  \"Workflow Url : \" + data.workflow_url + \"\\n\" +\n  \"Connector : \" + connector_name + \"\\n\" +\n  \"Date & Time : \" + dateTime.toLocaleString() + \"\\n\" +\n  \"Message : Getting Customer Data Fails With Status Code Of \" + status_code;\n  \n  \n  \n\treturn emailMessage;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-45": {
+          "title": "Response To Parent",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : false\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-46": {
+          "title": "Make Email",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "errors_list"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.storage-58.value"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "execution_log_url"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.env.execution_log_url"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "current_running_date"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.trigger.data.current_running_date"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let emailString = \"\";\n  let subject = \"Error Alert / Production / AMC / Deals / Customers Sync With Error\";\n  \n  let IS_EMAIL_TO_SEND = false;\n  \n  if(input.errors_list && input.errors_list.length > 0){\n    \n    IS_EMAIL_TO_SEND = true;\n    \n    emailString = \"Hi \\n\" + \n      \"Date : \" + input.current_running_date + \"\\n\" +\n      \"Workflow URL : \" + input.execution_log_url + \"\\n\" +\n      \"Customers Sync In NetSuite Failed With Error \\n\";\n    \n    for(let i = 0; i < input.errors_list.length; i++){\n      emailString += input.errors_list[i] + \"\\n\";\n    };\n    \n  };\n  \n  let labels = new Array();\n  let tempArr = subject.split(\"/\");\n  \n  for(let i = 0; i < tempArr.length; i++){\n  \tlabels.push(tempArr[i].toLowerCase().trim());\n  }\n  \n  let ticket = {\n  \t\"subject\" : subject,\n    \"labels\" : labels,\n    \"content\" : emailString\n  };\n  \n\treturn {\n    IS_EMAIL_TO_SEND,\n    emailString,\n    subject,\n    ticket\n  };\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-47": {
+          "title": "Response To Parent",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : true\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-8": {
+          "title": "Set Value For Lower Condition",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "last_error_flow_name"
+                    },
+                    "value": {
+                      "type": "jsonpath",
+                      "value": "$.steps.trigger.data.last_error_flow_name"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function (input, fileInput) {\n  return input.last_error_flow_name == \"\" ||\n    input.last_error_flow_name == \"_customer\"\n    ? true\n    : false;\n};\n"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "script-9": {
+          "title": "Response To Parent",
+          "connector": {
+            "name": "script",
+            "version": "3.1"
+          },
+          "operation": "execute",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "variables": {
+              "type": "array",
+              "value": [
+                {
+                  "type": "object",
+                  "value": {
+                    "name": {
+                      "type": "string",
+                      "value": "foo"
+                    },
+                    "value": {
+                      "type": "string",
+                      "value": "bar"
+                    }
+                  }
+                }
+              ]
+            },
+            "script": {
+              "type": "string",
+              "value": "// You can reference the input variables using input.NAME\n// Parsed JSON files could be referenced as fileInput\nexports.step = function(input, fileInput) {\n  \n  let response = {\n  \t\"isSuccess\" : true\n  }\n  \n\treturn response;\n};"
+            },
+            "file_output": {
+              "type": "boolean",
+              "value": false
+            }
+          }
+        },
+        "send-email-3": {
+          "title": "Send Email",
+          "connector": {
+            "name": "send-email",
+            "version": "3.0"
+          },
+          "operation": "send_text_email",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "from": {
+              "type": "object",
+              "value": {
+                "email": {
+                  "type": "string",
+                  "value": "notifications@m.traymail.io"
+                },
+                "name": {
+                  "type": "string",
+                  "value": "tray.io notifications"
+                }
+              }
+            },
+            "public_url": {
+              "type": "jsonpath",
+              "value": "$.env.public_url"
+            },
+            "subject": {
+              "type": "jsonpath",
+              "value": "$.steps.script-46.result.subject"
+            },
+            "content": {
+              "type": "jsonpath",
+              "value": "$.steps.script-46.result.emailString"
+            },
+            "to": {
+              "type": "jsonpath",
+              "value": "$.steps.trigger.data.recipients"
+            },
+            "cc": {
+              "type": "jsonpath",
+              "value": "$.steps.trigger.data.cc_recs"
+            }
+          }
+        },
+        "storage-1": {
+          "title": "Data Storage",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.script-40.result.nextPage"
+            }
+          }
+        },
+        "storage-23": {
+          "title": "Get Flow From We Need To Start",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "default_value": {
+              "type": "string",
+              "value": ""
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOW_NAME_ON_WHICH_ERROR_OCCURRED_LAST_TIME"
+            }
+          }
+        },
+        "storage-50": {
+          "title": "Set Failed Flow Name",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOW_NAME_ON_WHICH_ERROR_OCCURRED_LAST_TIME"
+            },
+            "value": {
+              "type": "string",
+              "value": "_customer"
+            }
+          }
+        },
+        "storage-51": {
+          "title": "Set Failed Page Number",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-4.value"
+            }
+          }
+        },
+        "storage-52": {
+          "title": "Append Error Into Error List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "append_to_list",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOWS_ERROR_DETAILS"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.script-41.result"
+            },
+            "create_if_missing": {
+              "type": "boolean",
+              "value": true
+            }
+          }
+        },
+        "storage-53": {
+          "title": "Set Failed Flow Name",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOW_NAME_ON_WHICH_ERROR_OCCURRED_LAST_TIME"
+            },
+            "value": {
+              "type": "string",
+              "value": "_customer"
+            }
+          }
+        },
+        "storage-54": {
+          "title": "Set Failed Page Number",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-4.value"
+            }
+          }
+        },
+        "storage-55": {
+          "title": "Set Failed Flow Name",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOW_NAME_ON_WHICH_ERROR_OCCURRED_LAST_TIME"
+            },
+            "value": {
+              "type": "string",
+              "value": "_customer"
+            }
+          }
+        },
+        "storage-56": {
+          "title": "Set Failed Page Number",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.loop-4.value"
+            }
+          }
+        },
+        "storage-57": {
+          "title": "Append Error Into Error List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "append_to_list",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOWS_ERROR_DETAILS"
+            },
+            "value": {
+              "type": "jsonpath",
+              "value": "$.steps.script-44.result"
+            },
+            "create_if_missing": {
+              "type": "boolean",
+              "value": true
+            }
+          }
+        },
+        "storage-58": {
+          "title": "Get Customer Response Err List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "default_value": {
+              "type": "null",
+              "value": null
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_DATA_RESPONSE_ERRORS"
+            }
+          }
+        },
+        "storage-59": {
+          "title": "Del Customer Response Err List",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "delete",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_DATA_RESPONSE_ERRORS"
+            }
+          }
+        },
+        "storage-60": {
+          "title": "Set Failed Flow Name",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_FLOW_NAME_ON_WHICH_ERROR_OCCURRED_LAST_TIME"
+            },
+            "value": {
+              "type": "string",
+              "value": ""
+            }
+          }
+        },
+        "storage-61": {
+          "title": "Set Failed Page Number",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "set",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            },
+            "value": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "storage-8": {
+          "title": "Get Last Run Page Failed Num",
+          "connector": {
+            "name": "storage",
+            "version": "1.4"
+          },
+          "operation": "get",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "scope": {
+              "type": "string",
+              "value": "Account"
+            },
+            "default_value": {
+              "type": "number",
+              "value": 1
+            },
+            "key": {
+              "type": "string",
+              "value": "AMC_CUSTOMER_FAILED_PAGE_NUMBER"
+            }
+          }
+        },
+        "terminate-1": {
+          "title": "Terminate",
+          "connector": {
+            "name": "terminate",
+            "version": "1.1"
+          },
+          "operation": "terminate_run",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "terminate-3": {
+          "title": "Terminate",
+          "connector": {
+            "name": "terminate",
+            "version": "1.1"
+          },
+          "operation": "terminate_run",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {}
+        },
+        "trigger": {
+          "title": "Callable Trigger",
+          "connector": {
+            "name": "callable-trigger",
+            "version": "2.0"
+          },
+          "operation": "trigger_and_respond",
+          "output_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "last_error_flow_name": {
+                    "type": "string"
+                  },
+                  "current_running_date": {
+                    "type": "string"
+                  },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "email"
+                      ]
+                    }
+                  },
+                  "cc_recs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "email"
+                      ]
+                    }
+                  }
+                }
+              },
+              "#calling_workflow": {
+                "type": "string"
+              },
+              "#calling_execution": {
+                "type": "string"
+              },
+              "#calling_execution_log_url": {
+                "type": "string"
+              }
+            }
+          },
+          "error_handling": {},
+          "properties": {}
+        }
+      },
+      "dependencies": [
+        {
+          "id": "61d8badc-3101-499c-975c-bdfd1bbddd3d",
+          "name": "Fire & Forgot Creating JIRA SOS Alerts"
+        },
+        {
+          "id": "91be5328-c787-4d7a-a155-e0a106f3fad8",
+          "name": "Americor Clients To NetSuite Customers - Child - PROD"
+        }
+      ]
+    }
+  ],
+  "projects": []
+}
